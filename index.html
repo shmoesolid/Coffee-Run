@@ -11,12 +11,14 @@
     
     <!-- link to bulma -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.min.css" />
+    <!-- link to font awesome-->
     <link
     rel="stylesheet"
     href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
     crossorigin="anonymous"
     />
+    <!-- link to animate.css-->
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
@@ -27,13 +29,24 @@
 </head>
 <body>
     <div class="container">
-        <div class="vl"></div>
-        <p id="dayPara">Thursday</p>
-        <h3 id="dateHeader">May, 21</h3>
-       <p id="degrees"><i class="fas fa-cloud-sun"></i>90º</p>
-   <h1>coffee run<i class="fas fa-walking"></i></h1>
-   <button class="button is-dark" class="animate__animated animate__fadeInDown" id="gsBtn">Get Started</button>
+        <div class="block">
+            <div class="vl"></div>
+            <p id="dayPara">Thursday</p>
+            <h3 id="dateHeader">May, 21</h3>
+            <p id="degrees"><i class="fas fa-cloud-sun"></i>90º</p>
+        </div>
+    <div class="block">
+        <h1>coffee run<i class="fas fa-walking"></i></h1>
+        <button class="button is-dark" class="animate__animated animate__fadeInDown" id="gsBtn">Get Started</button>
+    </div>
+   <div class="block">
+    <form>
+        <div class="field" id="addressInput">
+            <input type="text" class="input" placeholder="Enter Your Address">
+        </div>
+    </form>
+   </div>
+   
    </div>
 </body>
-
 </html>
