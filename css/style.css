@@ -1,3 +1,6 @@
+* {
+    font-family: montserrat, sans-serif;
+}
 html {
     background: rgb(58, 58, 58);
     background: linear-gradient( to bottom,rgb(58, 58, 58), black);
@@ -11,9 +14,71 @@ h1 {
     font-family: montserrat, sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: white;
+    color: rgb(124, 124, 124);
     font-size: 200px;
     text-align: center;
-    padding-top: 255px;
-    opacity: 60%;
+    padding-top: 100px;
+    margin-right: 0px;
     }
+#gsBtn {
+    align-content: center;  
+    margin-left: 600px;
+    animation: fadeInDown; 
+    animation-duration: 1s;
+}
+.fa-walking {
+    font-size: 60px;
+    position: fixed;
+    margin-top: 70px;
+}
+
+.vl {
+    position: fixed;
+    border-left: 2px solid rgb(255, 255, 255);
+    height: 80px;
+    margin-top: 35px;
+    margin-left: 1100px;
+    display: inline-block;
+  }
+
+  #dayPara {
+    color: rgb(124, 124, 124);
+    font-size: 15px;
+    margin-top: 35px;
+    margin-left: 1000px;
+    margin-right: 5px;
+    display: inline-block;
+  }
+
+  #dateHeader {
+    color: white;
+    font-size: 40px;
+    margin-left: 955px;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+#degrees {
+    display: inline-block;
+    font-size: 25px;
+    position: fixed;
+    margin-left: 1110;
+    padding-left: 5px;
+    color:rgb(219, 219, 219);
+}
+
+.fa-cloud-sun {
+    display: inline;
+    font-size: 30px;
+    color: rgb(219, 219, 219);
+    margin-left: 10px
+
+}
+
+.input {
+    width: 40%;
+    background-color: black;
+    opacity: 30%;
+    color: white;
+    vertical-align: center;
+}
