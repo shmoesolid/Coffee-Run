@@ -1,2 +1,4 @@
 
-// setup listeners here referencing callbacks in func_listeners.js
+// setup listener for getting started
+$("#gsBtn").on("click", cb_start);
+
