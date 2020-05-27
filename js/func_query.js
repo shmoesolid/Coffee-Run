@@ -2,9 +2,8 @@
 /////////////////////////////////////////////////////////////////////////
 /** open weather api call
  * 
- * @param {string} location 
- * @param {enum} type 
- * @param {string} ocCity 
+ * @param {int} lat
+ * @param {int} lon
  */
 function query_weather(lat, lon)
 {
@@ -23,6 +22,10 @@ function query_weather(lat, lon)
     {
         // DEBUG
         console.log(res);
+
+        // format unix dt data into usable display array
+        var formattedDateArray = _formatUnixDT(res.current.dt);
+        console.log( formattedDateArray );
 
         // do stuff with weather data
 
