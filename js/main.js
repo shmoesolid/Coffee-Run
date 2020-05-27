@@ -1,5 +1,4 @@
 
-// setup listeners here referencing callbacks in func_listeners.js
+// setup listeners here for search box?
 
-// DEBUG CHECK
-getLocation();
+$("#gsBtn").on("click", cb_start)

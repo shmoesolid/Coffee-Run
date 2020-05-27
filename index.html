@@ -28,25 +28,26 @@
     <link rel="stylesheet" href="https://use.typekit.net/qnf4mpd.css">
 </head>
 <body>
-    <div class="container">
-
-        <div class="block">
-            <div class="vl"></div>
-            <p id="dayPara">Thursday</p>
-            <h3 id="dateHeader">May, 21</h3>
-            <p id="degrees"><i class="fas fa-cloud-sun"></i>90º</p>
-        </div>
-    <div class="block">
-        <h1>coffee run<i class="fas fa-walking"></i></h1>
-        <button class="button is-dark" class="animate__animated animate__fadeInDown" id="gsBtn">Get Started</button>
+    <div class="container" id="homeScreen">
+        <div class="block" id="weatherBlock">
+            <p id="degrees"><i class="fas fa-cloud-sun"></i> 90º</p>
+            <p id="dayPara">Thursday, May 21</p>
+       </div>
+    <h1>coffee run<i class="fas fa-walking"></i></h1>
+    <button class="button is-dark" class="animate__animated animate__fadeInDown" id="gsBtn">Get Started</button>
     </div>
-   <div class="block">
-    <form>
-        <div class="field" id="addressInput">
-            <input type="text" class="input" placeholder="Enter Your Address">
-        </div>
-    </form>
-  </div>
-   </div>
+    
+    <div class="container" id="listScreen">
+            <div class="field">
+                <input type="text" class="input hide" id="inputAdd" placeholder="Enter Your Location">
+            </div>
+    </div>
+
+   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/prelem.js"></script>
+   <script src="js/func_location.js"></script>
+   <script src="js/func_query.js"></script>
+   <script src="js/func_listeners.js"></script>
+   <script src="js/main.js"></script>
 </body>
 </html>
