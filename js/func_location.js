@@ -21,8 +21,9 @@ function getLocation()
  */
 function _positionSucess(position) 
 {
-    // run places query function with lat/lon
+    // query places and weather with lat/lon
     query_places(position.coords.latitude, position.coords.longitude);
+    query_weather(position.coords.latitude, position.coords.longitude);
 }
 
 /** callback for geolocation failure
@@ -66,10 +67,11 @@ function getLocationByIP()
         success: function(data)
         {
             // DEBUG
-            console.log(data);
+            //console.log(data);
 
-            // run places query function with lat/lon
+            // query places and weather with lat/lon
             query_places(data.latitude, data.longitude);
+            query_weather(data.latitude, data.longitude);
         }
 
     });

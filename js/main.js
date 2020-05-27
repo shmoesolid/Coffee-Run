@@ -1,4 +1,5 @@
 
-// setup listeners here for search box?
+// setup listeners here referencing callbacks in func_listeners.js
 
+// DEBUG CHECK
 getLocation();
