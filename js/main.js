@@ -1,4 +1,7 @@
 
 // setup listeners here for search box?
 
-getLocation();
+$("#gsBtn").on("click", function() {
+    $("#inputAdd").addClass('show');
+
+})
