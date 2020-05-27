@@ -1,4 +1,4 @@
 
-// setup listeners here for search box?
+// setup listener for getting started
+$("#gsBtn").on("click", cb_start);
 
-$("#gsBtn").on("click", cb_start)
