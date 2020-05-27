@@ -2,9 +2,8 @@
 /////////////////////////////////////////////////////////////////////////
 /** open weather api call
  * 
- * @param {string} location 
- * @param {enum} type 
- * @param {string} ocCity 
+ * @param {int} lat
+ * @param {int} lon
  */
 function query_weather(lat, lon)
 {

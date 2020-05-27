@@ -1,11 +1,16 @@
 * {
     font-family: montserrat, sans-serif;
 }
+
+
 html {
+
     background: linear-gradient(to bottom,rgb(58, 58, 58), black);
     background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100%;
+
+    background-size: auto;
+    width: 100%;
+    height: 100%;
 }
 
 h1 {
@@ -18,65 +23,66 @@ h1 {
     padding-top: 100px;
     margin-right: 0px;
     }
+
 #gsBtn {
-    align-content: center;  
-    margin-left: 600px;
+    margin-left: 630px;
     animation: fadeInDown; 
     animation-duration: 1s;
 }
+
 .fa-walking {
     font-size: 60px;
-    position: fixed;
-    margin-top: 70px;
+    position: absolute;
+    margin-top: 50px;
 }
 
-.vl {
-    position: fixed;
-    border-left: 2px solid rgb(255, 255, 255);
-    height: 80px;
-    margin-top: 35px;
-    margin-left: 1100px;
-    display: inline-block;
-  }
+#weatherBlock {
+    width: 250px;
+    height: 130px;
+    margin-top: 20px;
+    margin-left: 1130px;
+}
 
-  #dayPara {
+#dayPara {
     color: rgb(124, 124, 124);
     font-size: 15px;
-    margin-top: 35px;
-    margin-left: 1000px;
-    margin-right: 5px;
-    display: inline-block;
+    margin-left: 60px;
+    display: block;
   }
 
-  #dateHeader {
-    color: white;
-    font-size: 40px;
-    margin-left: 955px;
-    margin-right: 5px;
-    display: inline-block;
-}
-
 #degrees {
-    display: inline-block;
     font-size: 25px;
-    position: fixed;
-    margin-left: 1110;
-    padding-left: 5px;
+    margin-left: 70px;
     color:rgb(219, 219, 219);
 }
 
 .fa-cloud-sun {
-    display: inline;
     font-size: 30px;
     color: rgb(219, 219, 219);
-    margin-left: 10px
-
 }
 
-.input {
+<<<<<<< HEAD
+#inputAdd {
     width: 40%;
+    background-color: rgb(238, 238, 238);
+    color: black;
+    margin-left: 410px;
+    display: hide;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+=======
+#adressInput {
+    width: 20%;
     background-color: black;
     opacity: 30%;
     color: white;
     vertical-align: center;
 }
+>>>>>>> 177c27b91b4d93bfb78af159cbe24d94fa70eca0

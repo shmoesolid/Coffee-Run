@@ -3,9 +3,9 @@
  * 
  * @param {event} event 
  */
-function cb_start(event)
-{
-
+function cb_start(event) {
+    $("#homeScreen").addClass('hide');
+    getLocation();
 }
 
 /** callback for specific location select/click

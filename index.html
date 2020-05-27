@@ -11,12 +11,14 @@
     
     <!-- link to bulma -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.min.css" />
+    <!-- link to font awesome-->
     <link
     rel="stylesheet"
     href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
     crossorigin="anonymous"
     />
+    <!-- link to animate.css-->
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
@@ -26,14 +28,26 @@
     <link rel="stylesheet" href="https://use.typekit.net/qnf4mpd.css">
 </head>
 <body>
-    <div class="container">
-        <div class="vl"></div>
-        <p id="dayPara">Thursday</p>
-        <h3 id="dateHeader">May, 21</h3>
-       <p id="degrees"><i class="fas fa-cloud-sun"></i>90º</p>
-   <h1>coffee run<i class="fas fa-walking"></i></h1>
-   <button class="button is-dark" class="animate__animated animate__fadeInDown" id="gsBtn">Start</button>
-   </div>
-</body>
+    <div class="container" id="homeScreen">
+        <div class="block" id="weatherBlock">
+            <p id="degrees"><i class="fas fa-cloud-sun"></i> 90º</p>
+            <p id="dayPara">Thursday, May 21</p>
+       </div>
+    <h1>coffee run<i class="fas fa-walking"></i></h1>
+    <button class="button is-dark" class="animate__animated animate__fadeInDown" id="gsBtn">Get Started</button>
+    </div>
+    
+    <div class="container" id="listScreen">
+            <div class="field">
+                <input type="text" class="input hide" id="inputAdd" placeholder="Enter Your Location">
+            </div>
+    </div>
 
+   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/prelem.js"></script>
+   <script src="js/func_location.js"></script>
+   <script src="js/func_query.js"></script>
+   <script src="js/func_listeners.js"></script>
+   <script src="js/main.js"></script>
+</body>
 </html>
