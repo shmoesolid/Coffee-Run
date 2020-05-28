@@ -2,7 +2,6 @@
     font-family: montserrat, sans-serif;
 }
 
-
 html {
 
     background: linear-gradient(to bottom,rgb(58, 58, 58), black);
@@ -61,7 +60,7 @@ h1 {
     color: rgb(219, 219, 219);
 }
 
-<<<<<<< HEAD
+
 #inputAdd {
     width: 40%;
     background-color: rgb(238, 238, 238);
@@ -77,7 +76,7 @@ h1 {
 .show {
     display: block;
 }
-=======
+
 #adressInput {
     width: 20%;
     background-color: black;
@@ -85,4 +84,16 @@ h1 {
     color: white;
     vertical-align: center;
 }
->>>>>>> 177c27b91b4d93bfb78af159cbe24d94fa70eca0
+
+h2 {
+    color: white;
+    font-size: 50px;
+}
+
+#listScreen {
+    padding-top: 70px;
+}
+
+.coffee {
+    width: 100px;
+}
