@@ -35,8 +35,11 @@ h1 {
     background-color: rgb(83, 83, 83);
 }
 
+#btnBox {
+        background-color: transparent;
+    }
+
 #gsBtn {
-    margin-left: 630px;
     animation: fadeInDown; 
     animation-duration: 1s;
 }
