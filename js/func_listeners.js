@@ -3,10 +3,10 @@
  * 
  * @param {event} event 
  */
-function cb_start(event) {
+function cb_start(event) 
+{
     $("#homeScreen").addClass('hide');
-    $("#listScreen").removeClass('hide');
-    getLocation();
+     getLocation();
 }
 
 /** callback for specific location select/click
@@ -55,6 +55,9 @@ function cb_places(res)
 {
     // DEBUG
     console.log(res);
+  
+    // show list screen container
+    $("#listScreen").removeClass('hide');
 
     // strip out unwanted places from results
     var strippedData = _stripUnwantedPlaces(res.results, UNWANTED_PLACES);
