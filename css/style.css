@@ -2,7 +2,6 @@
     font-family: montserrat, sans-serif;
 }
 
-
 html {
 
     background: linear-gradient(to bottom,rgb(58, 58, 58), black);
@@ -78,4 +77,25 @@ h1 {
 
 .show {
     display: block;
+}
+
+#adressInput {
+    width: 20%;
+    background-color: black;
+    opacity: 30%;
+    color: white;
+    vertical-align: center;
+}
+
+h2 {
+    color: white;
+    font-size: 50px;
+}
+
+#listScreen {
+    padding-top: 70px;
+}
+
+.coffee {
+    width: 100px;
 }
