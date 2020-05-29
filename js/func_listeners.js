@@ -5,9 +5,7 @@
  */
 function cb_start(event) {
     $("#homeScreen").addClass('hide');
-    $("#listScreen").removeClass('hide');
      getLocation();
-    getLocation();
 }
 
 /** callback for specific location select/click
@@ -47,4 +45,6 @@ function cb_places(res)
 
     // display strippedData of places array accordingly below
     // ..
+    $("#listScreen").removeClass('hide');
+
 }
