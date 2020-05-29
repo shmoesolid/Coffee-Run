@@ -19,6 +19,7 @@ h1 {
     text-align: center;
     vertical-align: middle;
     margin: auto;
+<<<<<<< HEAD
 }
 
 #btnBox {
@@ -27,6 +28,15 @@ h1 {
 
 #gsBtn {
     margin: auto;
+=======
+    }
+
+    #btnBox {
+        background-color: transparent;
+    }
+
+#gsBtn {
+>>>>>>> 79cc2350e81de49f2b2bc53a6bb1a046fd64d7a1
     animation: fadeInDown; 
     animation-duration: 1s;
 }
