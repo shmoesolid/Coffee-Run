@@ -18,11 +18,14 @@ h1 {
     font-weight: 400;
     font-style: normal;
     color: rgb(124, 124, 124);
-    font-size: 200px;
+    font-size: 10vw;
     text-align: center;
-    padding-top: 100px;
     margin-right: 0px;
     }
+
+#navbar1 {
+    background-color: black;
+}
 
 #gsBtn {
     margin-left: 630px;
@@ -61,7 +64,6 @@ h1 {
     color: rgb(219, 219, 219);
 }
 
-<<<<<<< HEAD
 #inputAdd {
     width: 40%;
     background-color: rgb(238, 238, 238);
@@ -77,12 +79,3 @@ h1 {
 .show {
     display: block;
 }
-=======
-#adressInput {
-    width: 20%;
-    background-color: black;
-    opacity: 30%;
-    color: white;
-    vertical-align: center;
-}
->>>>>>> 177c27b91b4d93bfb78af159cbe24d94fa70eca0
