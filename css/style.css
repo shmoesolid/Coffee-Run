@@ -6,7 +6,6 @@ html {
 
     background: linear-gradient(to bottom,rgb(58, 58, 58), black);
     background-repeat: no-repeat;
-
     background-size: auto;
     width: 100%;
     min-height: 100%;
@@ -20,10 +19,14 @@ h1 {
     font-size: 13vw;
     text-align: center;
     vertical-align: middle;
-}
+    margin: auto;
+    }
+
+    #btnBox {
+        background-color: transparent;
+    }
 
 #gsBtn {
-    margin-left: 630px;
     animation: fadeInDown; 
     animation-duration: 1s;
 }
