@@ -20,6 +20,6 @@ function formatUnixDT(dt)
 /** basic tempurature conversions
  * 
  */
-function convertKtoF(kTemp) { return Math.round(_convertCtoF(_convertKtoC(kTemp))); }
+function convertKtoF(kTemp) { return Math.round( convertCtoF(convertKtoC(kTemp))); }
 function convertCtoF(cTemp) { return cTemp * 9/5 + 32; }
 function convertKtoC(kTemp) { return kTemp - 273.15; }
