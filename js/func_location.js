@@ -56,7 +56,7 @@ function _positionError(error)
 /** get location by ip address fallback
  * 
  */
-function getLocationByIP()
+function getLocationByIP(weatherOnly=false)
 {
     // run ajax call
     $.ajax({
@@ -70,7 +70,7 @@ function getLocationByIP()
             //console.log(data);
 
             // query places and weather with lat/lon
-            query_places(data.latitude, data.longitude);
+            if (!weatherOnly) query_places(data.latitude, data.longitude);
             query_weather(data.latitude, data.longitude);
         }
 
