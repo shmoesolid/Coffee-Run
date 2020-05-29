@@ -24,6 +24,15 @@ h1 {
 
 #navbar1 {
     background-color: rgb(26, 26, 26);
+    height: 10px;
+}
+
+.navbar-item {
+    color: white;
+}
+
+#settings-button {
+    background-color: rgb(83, 83, 83);
 }
 
 #gsBtn {
