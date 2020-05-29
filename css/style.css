@@ -6,7 +6,7 @@ html {
     background: linear-gradient(to bottom,rgb(58, 58, 58), black);
     background-repeat: no-repeat;
     background-size: auto;
-    width: 100%;
+    min-width: 100%;
     min-height: 100%;
 }
 
@@ -20,6 +20,7 @@ h1 {
     vertical-align: middle;
     margin: auto;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 #btnBox {
@@ -30,8 +31,24 @@ h1 {
     margin: auto;
 =======
     }
+=======
+}
 
-    #btnBox {
+#navbar1 {
+    background-color: rgb(26, 26, 26);
+    height: 10px;
+}
+>>>>>>> aa25feb9251cb0a9533dd3016161c6ed62d27339
+
+.navbar-item {
+    color: white;
+}
+
+#settings-button {
+    background-color: rgb(83, 83, 83);
+}
+
+#btnBox {
         background-color: transparent;
     }
 
@@ -72,7 +89,6 @@ h1 {
     font-size: 30px;
     color: rgb(219, 219, 219);
 }
-
 
 #inputAdd {
     width: 40%;
