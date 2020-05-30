@@ -1,3 +1,4 @@
 $("#settings-button").on("click", function() {
-    var newDiv = $("<div id='test54'>")
+    console.log('test')
+    $("#settings-button").toggleClass("is-active")
 });
