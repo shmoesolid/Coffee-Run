@@ -27,8 +27,10 @@ function query_weather(lat, lon)
  * @param {int} lat 
  * @param {int} lon 
  */
-function query_places(lat, lon, radius = 10000)
+function query_places(lat, lon)
 {
+    var radius = $('#myRange').val(); // default
+
     // setup our data to send
     var settings = 
     {
@@ -36,7 +38,7 @@ function query_places(lat, lon, radius = 10000)
         "crossDomain": true,
         "url": "https://trueway-places.p.rapidapi.com/FindPlacesNearby"+
             "?type=cafe"+
-            "&radius="+ String(radius) +
+            "&radius="+ radius +
             "&language=en"+
             "&location="+ lat +"%252C" + lon,
         "method": "GET",
