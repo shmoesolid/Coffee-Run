@@ -148,14 +148,14 @@ function cb_places(res)
     }
 
     // click the first location to set source
-    $('#lb_0').click();
+    $('#li_0').click();
 }
 
+$('#li_0').click();
 
 
 
-
-$("#settings-button").on("click", function() {      // code for opening and closing 
+$("#settings-button").on("click", function() {       // code for opening and closing 
     $("#settings-button").toggleClass("is-active");  // settings button
  });
  
@@ -196,6 +196,7 @@ $("#settings-button").on("click", function() {      // code for opening and clos
            $(".coffee").css("color", "");
            $(".coffee").css("border-color", "");
        } 
- }
-    $('#li_0').click();
+ };
+
+ 
 
