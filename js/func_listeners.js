@@ -148,7 +148,7 @@ function cb_places(res)
     }
 
     // click the first location to set source
-    $('#lb_0').click();
+    $('#li_0').click();
 }
 
 
@@ -157,13 +157,14 @@ function cb_places(res)
 
 $("#settings-button").on("click", function() {      // code for opening and closing 
     $("#settings-button").toggleClass("is-active");  // settings button
- });
+});
+
+$('.dropdown-item').bind('click', function (e) { e.stopPropagation() });    // code to disable closing the menu while clicking on menu items
+
+$("#lightMode").on("click", lightModeFunc)
  
- $('.dropdown-item').bind('click', function (e) { e.stopPropagation() });    // code to disable closing the menu while clicking on menu items
- 
- $("#lightMode").on("click", lightModeFunc)
- 
- function lightModeFunc() {     // light mode function
+ function lightModeFunc() 
+ {     // light mode function
      if ($("#lightMode").is( 
          ":checked")) {                              
            console.log("Light mode has been enabled");
