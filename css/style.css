@@ -33,6 +33,7 @@ h1 {
 
 #btnBox {
         background-color: transparent;
+        box-shadow: none;
     }
 
 #gsBtn {
