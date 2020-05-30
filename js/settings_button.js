@@ -1,4 +1,14 @@
 $("#settings-button").on("click", function() {
-    console.log('test')
-    $("#settings-button").toggleClass("is-active")
+   $("#settings-button").toggleClass("is-active");
 });
+
+$('.dropdown-item').bind('click', function (e) { e.stopPropagation() })
+
+$("#lightMode").on("click", function() {
+    if ($("#lightMode").is( 
+        ":checked")) { 
+          console.log("Check box in Checked"); 
+      } else { 
+          console.log("Check box is Unchecked"); 
+      } 
+})
