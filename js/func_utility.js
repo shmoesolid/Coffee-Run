@@ -23,3 +23,33 @@ function formatUnixDT(dt)
 function convertKtoF(kTemp) { return Math.round( convertCtoF(convertKtoC(kTemp))); }
 function convertCtoF(cTemp) { return cTemp * 9/5 + 32; }
 function convertKtoC(kTemp) { return kTemp - 273.15; }
+
+/**
+ * 
+ * @param {element} elmToShow 
+ */
+function toggleDisplay(elmToShow)
+{
+    // setup quick array of all
+    var elms = [ $("#homeScreen"), $("#listScreen"),  $('#aboutScreen') ];
+
+    // go through each one and determin visibility
+    for (var i = 0; i < elms.length; i++)
+    {
+        // show it
+        if (elms[i] == elmToShow)
+        {
+            // has it? remove it
+            if (elms[i].hasClass('hide'))
+                elms[i].removeClass('hide');
+        }
+
+        // hide the rest
+        else
+        {
+            // doesn't have it?  add it
+            if (!elms[i].hasClass('hide'))
+                elms[i].addClass('hide');
+        }
+    }
+}
