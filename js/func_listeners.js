@@ -6,7 +6,8 @@
 function cb_start(event) 
 {
     $("#homeScreen").addClass('hide');
-     getLocation();
+    //toggleDisplay( $("#loadingScreen") );
+    getLocation();
 }
 
 /** callback for specific location select/click
@@ -25,9 +26,6 @@ function cb_locationSelect(event)
 
     // update iframe's src location with new
     $('#gmap_canvas').attr("src", newSource);
-
-    // force reload
-    //$('#currentElement').attr("src", $('#currentElement').attr("src"));
 }
 
 /** callback for weather ajax call
@@ -63,6 +61,7 @@ function cb_places(res)
   
     // show list screen container
     $("#listScreen").removeClass('hide');
+    //toggleDisplay( $("#listScreen") );
 
     // strip out unwanted places from results
     var strippedData = _stripUnwantedPlaces(res.results, UNWANTED_PLACES);
