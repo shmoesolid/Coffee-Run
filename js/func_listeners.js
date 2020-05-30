@@ -117,19 +117,21 @@ function cb_places(res)
 
         var lightModeEnabled = $('#lightMode').prop("checked");
 
-        if (current.address != 'undefined')
+        if (current.address != undefined)
             desElm.append("<p " + ((lightModeEnabled) ? "" : "class='has-text-light'") + " style='padding:2px 10px;'>" + 
                 current.address + 
                 "</p>"
             );
 
-        if (current.phone_number != 'undefined')
+        if (current.phone_number != undefined)
+        {
             desElm.append("<p " + ((lightModeEnabled) ? "" : "class='has-text-light'") + " style='padding:2px 10px;'>" + 
                 current.phone_number + 
                 "</p>"
             );
+        }
 
-        if (current.website != 'undefined')
+        if (current.website != undefined)
             desElm.append("<p " + ((lightModeEnabled) ? "" : "class='has-text-light'") + " style='padding:2px 10px;'>" + 
                 "<a href='" + current.website + "'>Website</a>" +
                 "</p>"
@@ -157,13 +159,14 @@ $('#li_0').click();
 
 $("#settings-button").on("click", function() {       // code for opening and closing 
     $("#settings-button").toggleClass("is-active");  // settings button
- });
+});
+
+$('.dropdown-item').bind('click', function (e) { e.stopPropagation() });    // code to disable closing the menu while clicking on menu items
+
+$("#lightMode").on("click", lightModeFunc)
  
- $('.dropdown-item').bind('click', function (e) { e.stopPropagation() });    // code to disable closing the menu while clicking on menu items
- 
- $("#lightMode").on("click", lightModeFunc)
- 
- function lightModeFunc() {     // light mode function
+ function lightModeFunc() 
+ {     // light mode function
      if ($("#lightMode").is( 
          ":checked")) {                              
            console.log("Light mode has been enabled");
