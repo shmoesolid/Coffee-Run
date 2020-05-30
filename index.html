@@ -56,7 +56,7 @@
               <div class="dropdown is-right" id="settings-button">
                 <div class="dropdown-trigger">
                   <button class="button" aria-haspopup="true" aria-controls="dropdown-menu2">
-                    <span>Content</span>
+                    <span>Settings</span>
                     <span class="icon is-small">
                       <i class="fas fa-angle-down" aria-hidden="true"></i>
                     </span>
@@ -71,6 +71,12 @@
                     <div class="dropdown-item">
                       <input type="checkbox" id="lightMode">
                       <label for="lightMode">Enable light mode</label>
+                    </div>
+                    <hr class="dropdown-divider">
+                    <div class="dropdown-item">
+                      <p id="radiusRange">Radius: <input type="range" min="100" max="10000" value="10000" class="slider" id="myRange">
+                        <span id='radiusRangeValue'></span>
+                      </p>
                     </div>
                     <hr class="dropdown-divider">
                     <a href="#" class="dropdown-item">

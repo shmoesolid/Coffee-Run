@@ -12,3 +12,7 @@ $("#lightMode").on("click", function() {
           console.log("Check box is Unchecked"); 
       } 
 })
+
+$('#radiusRange').change(function(){
+    $('radiusRangeValue').value=$(this).val();
+     });
