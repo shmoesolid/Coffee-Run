@@ -55,7 +55,7 @@ h1 {
     width: 250px;
     height: 130px;
     margin: auto;
-    left: 40vw;
+    left: 36vw;
     top: 1vw;
     position: relative;
 }
@@ -111,12 +111,12 @@ h2 {
 
 .coffee {
     /* width: 100px;*/
+
 }
 
 #aboutPage {
     text-align: center;
-    margin-top: 10%;
-    color: white;
-    font-size: 15px;
+    margin-top: 10vh;
 }
+
 

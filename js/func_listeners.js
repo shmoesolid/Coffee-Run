@@ -26,6 +26,9 @@ function cb_locationSelect(event)
 
     // update iframe's src location with new
     $('#gmap_canvas').attr("src", newSource);
+
+    // force reload
+    //$('#currentElement').attr("src", $('#currentElement').attr("src"));
 }
 
 /** callback for weather ajax call
