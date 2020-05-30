@@ -2,7 +2,7 @@ $("#settings-button").on("click", function() {      // code for opening and clos
    $("#settings-button").toggleClass("is-active");  // settings button
 });
 
-$('.dropdown-item').bind('click', function (e) { e.stopPropagation() })     // code to disable closing the menu while clicking on menu items
+$('.dropdown-item').bind('click', function (e) { e.stopPropagation() });    // code to disable closing the menu while clicking on menu items
 
 $("#lightMode").on("click", function() {            
     if ($("#lightMode").is( 
@@ -18,6 +18,9 @@ $("#lightMode").on("click", function() {
           $("#gsBtn").css("background-color", "#342c26");
           $("#dayPara").css("color", "#57483d");
           $("#degrees").css("color", "#625248");
+          $("h2").css("color", "#5a4a3f");
+          $(".coffee").css("color", "#5a4a3f");
+          $(".coffee").css("border-color", "#5a4a3f");
       } else { 
           console.log("Light mode has been disabled");
           $("#navbar1").css("background-color", "rgb(26, 26, 26)")
@@ -30,5 +33,8 @@ $("#lightMode").on("click", function() {
           $("#gsBtn").css("background-color", "");
           $("#dayPara").css("color", "");
           $("#degrees").css("color", "");
+          $("h2").css("color", "white");
+          $(".coffee").css("color", "");
+          $(".coffee").css("border-color", "");
       } 
 })
