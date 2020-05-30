@@ -42,7 +42,8 @@ function query_places(lat, lon, radius = 10000)
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "trueway-places.p.rapidapi.com",
-            "x-rapidapi-key": "6b6b159048mshff9f4ab35d6dc5ep1a36a3jsnaebaf259d502"
+            "x-rapidapi-key": "6b6b159048mshff9f4ab35d6dc5ep1a36a3jsnaebaf259d502",
+            "Access-Control-Allow-Origin": "*"
         }
     }
     
