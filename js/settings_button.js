@@ -4,7 +4,7 @@ $("#settings-button").on("click", function() {      // code for opening and clos
 
 $('.dropdown-item').bind('click', function (e) { e.stopPropagation() });    // code to disable closing the menu while clicking on menu items
 
-$("#lightMode").on("click", function() {            
+$("#lightMode").on("click", function() {    // code for dynamically updated css when switching back and forth from light mode
     if ($("#lightMode").is( 
         ":checked")) {                              
           console.log("Light mode has been enabled");
