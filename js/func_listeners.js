@@ -117,19 +117,21 @@ function cb_places(res)
 
         var lightModeEnabled = $('#lightMode').prop("checked");
 
-        if (current.address != 'undefined')
+        if (current.address != undefined)
             desElm.append("<p " + ((lightModeEnabled) ? "" : "class='has-text-light'") + " style='padding:2px 10px;'>" + 
                 current.address + 
                 "</p>"
             );
 
-        if (current.phone_number != 'undefined')
+        if (current.phone_number != undefined)
+        {
             desElm.append("<p " + ((lightModeEnabled) ? "" : "class='has-text-light'") + " style='padding:2px 10px;'>" + 
                 current.phone_number + 
                 "</p>"
             );
+        }
 
-        if (current.website != 'undefined')
+        if (current.website != undefined)
             desElm.append("<p " + ((lightModeEnabled) ? "" : "class='has-text-light'") + " style='padding:2px 10px;'>" + 
                 "<a href='" + current.website + "'>Website</a>" +
                 "</p>"
