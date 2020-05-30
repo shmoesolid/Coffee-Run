@@ -178,7 +178,6 @@ $("#settings-button").on("click", function() {      // code for opening and clos
            $("h2").css("color", "#5a4a3f");
            $(".coffee").css("color", "#5a4a3f");
            $(".coffee").css("border-color", "#5a4a3f");
-           $("p").removeClass("has-text-light");
        } else { 
            console.log("Light mode has been disabled");
            $("#navbar1").css("background-color", "rgb(26, 26, 26)")
@@ -194,7 +193,6 @@ $("#settings-button").on("click", function() {      // code for opening and clos
            $("h2").css("color", "white");
            $(".coffee").css("color", "");
            $(".coffee").css("border-color", "");
-           $("p").addClass("has-text-light");
        } 
  }
     $('#li_0').click();
