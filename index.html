@@ -3,10 +3,10 @@
 
 <head>
     <!-- title and standard meta usage -->
-    <title>Moodify</title>
+    <title>Coffee Run</title>
     <meta charset="UTF-8" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    <meta name="description" content="A simple cafe style locations list near you with map feature." />
+    <meta name="keywords" content="coffee,map,cafe,location" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- link to bulma -->
@@ -36,8 +36,12 @@
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </a>
+  
+        <a class="navbar-item" href="about.html">
+          About
+        </a -->
+  
       </div>
-    
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
     
@@ -82,71 +86,79 @@
           </div>
         </div>
       </div>
-    </nav>
-    <!-- End of navbar -->
-
-    <div class="container" id="homeScreen">
-        <div class="block" id="weatherBlock">
-            <p id="degrees"><i class="fas fa-cloud-sun"></i> 90º</p>
-            <p id="dayPara">Thursday, May 21</p>
-        </div>
-        <h1>coffee run<i class="fas fa-walking"></i></h1>
-        <div class="box has-text-centered" id="btnBox">
-            <button class="button is-dark" class="animate__animated animate__fadeInDown" id="gsBtn">Get Started</button>
-        </div>
-        <div id="aboutScreen">
-          <p id="aboutPage">Hey there! If you're anything like the creators of this site, you love coffee! <br>
-             Finding a cozy spot to enjoy a cup of joe is real gem, but sometime's hard to find. <br>
-             Anytime, and anywhere, Coffee Run is here to locate coffee shops near you!
-          </p>
-        </div>
     </div>
+  </nav>
+  <!-- End of navbar -->
 
-    <div class="container hide" id="listScreen">
-      <div class="section">
-          <h2>Coffee Near You</h2>
-      <ul id="locations-list">
+  <div class="block" id="weatherBlock">
+    <p id="degrees"><i class="fas fa-cloud-sun"></i> 90º</p>
+    <p id="dayPara">Thursday, May 21</p>
+  </div>
+
+  <div class="container" id="homeScreen">
+    <!-- div class="block" id="weatherBlock">
+      <p id="degrees"><i class="fas fa-cloud-sun"></i> 90º</p>
+      <p id="dayPara">Thursday, May 21</p>
+    </div -->
+    <h1>coffee run<i class="fas fa-walking"></i></h1>
+    <div class="box has-text-centered" id="btnBox">
+      <button class="button is-dark" class="animate__animated animate__fadeInDown" id="gsBtn">Get Started</button>
+    </div>
+    <div id="aboutScreen">
+      <p id="aboutPage">Hey there! If you're anything like the creators of this site, you love coffee! <br>
+        Finding a cozy spot to enjoy a cup of joe is real gem, but sometime's hard to find. <br>
+        Anytime, and anywhere, Coffee Run is here to locate coffee shops near you!
+      </p>
+    </div>
+  </div>
+
+  <div class="container hide" id="loadingScreen">
+    <h1>loading...</h1>
+  </div>
+
+  <div class="container hide" id="listScreen">
+    <h2>Coffee Near You</h2>
+    <div class="columns">
+      <ul id="locations-list" class="column">
         <li><button class="coffee button is-black is-inverted is-outlined">COFFEE</button></li>
         <li><button class="coffee button is-black is-inverted is-outlined">COFFEE</button></li>
         <li><button class="coffee button is-black is-inverted is-outlined">COFFEE</button></li>
       </ul>
 
       <!-- START EMBEDDED MAP-->
-      <div class="mapouter">
-        <div class="gmap_canvas">
-            <iframe 
-                width="600" 
-                height="500" 
-                id="gmap_canvas" 
-                src="" 
-                frameborder="0" 
-                scrolling="no" 
-                marginheight="0" 
-                marginwidth="0"
-            ></iframe>
-        </div>
-        <style>
-            .mapouter
-            {
-                position:relative;
-                text-align:right;
-                height:500px;
-                width:600px;
-            }
-            .gmap_canvas 
-            {
-                overflow:hidden;
-                background:none!important;
-                height:500px;
-                width:600px;
-            }
-        </style>
-    </div>
-    <!-- END EMBEDDED MAP -->
+      <div class="gmap_canvas column is-three-quarters">
+        <iframe 
+          width="600" 
+          height="500" 
+          id="gmap_canvas" 
+          src="" 
+          frameborder="0" 
+          scrolling="no" 
+          marginheight="0" 
+          marginwidth="0"
+        ></iframe>
       </div>
+      <style>
+        .gmap_canvas 
+        {
+          overflow:hidden;
+          background:none!important;
+          height:80vh;
+          width:100%;
+          min-height:200px;
+          min-width:300px;
+        }
+        iframe
+        {
+          height:100%;
+          width:100%;
+        }
+      </style>
+      <!-- END EMBEDDED MAP -->
+    </div>
   </div>
 
-
+  <!-- SCRIPTS -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="js/prelem.js"></script>
     <script src="js/func_utility.js"></script>
