@@ -115,20 +115,22 @@ function cb_places(res)
         desElm.attr("id", "d_" + i);
         desElm.attr("style", 'margin-bottom:10px;');
 
+        var lightModeEnabled = $('#lightMode').prop("checked");
+
         if (current.address != 'undefined')
-            desElm.append("<p class='has-text-light' style='padding:2px 10px;'>" + 
+            desElm.append("<p " + ((lightModeEnabled) ? "" : "class='has-text-light'") + " style='padding:2px 10px;'>" + 
                 current.address + 
                 "</p>"
             );
 
         if (current.phone_number != 'undefined')
-            desElm.append("<p class='has-text-light' style='padding:2px 10px;'>" + 
+            desElm.append("<p " + ((lightModeEnabled) ? "" : "class='has-text-light'") + " style='padding:2px 10px;'>" + 
                 current.phone_number + 
                 "</p>"
             );
 
         if (current.website != 'undefined')
-            desElm.append("<p class='has-text-light' style='padding:2px 10px;'>" + 
+            desElm.append("<p " + ((lightModeEnabled) ? "" : "class='has-text-light'") + " style='padding:2px 10px;'>" + 
                 "<a href='" + current.website + "'>Website</a>" +
                 "</p>"
             );
