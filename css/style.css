@@ -31,12 +31,9 @@ h1 {
     color: white;
 }
 
-#settings-button {
-    background-color: rgb(83, 83, 83);
-}
-
 #btnBox {
         background-color: transparent;
+        box-shadow: none;
     }
 
 #gsBtn {
@@ -109,14 +106,18 @@ h2 {
     padding-top: 70px;
 }
 
-.coffee {
-    /* width: 100px;*/
+/* .coffee {
+     width: 100px;
 
-}
+}*/
 
 #aboutPage {
     text-align: center;
     margin-top: 10vh;
 }
 
-
+#settingsButton {
+    background-color: rgb(78, 78, 78);
+    border-color: black;
+    color: white;
+}

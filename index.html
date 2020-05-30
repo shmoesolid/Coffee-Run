@@ -28,7 +28,7 @@
     <nav class="navbar" role="navigation" aria-label="main navigation" id="navbar1">
       <div class="navbar-brand">
         <a class="navbar-item" href="">
-          <img src="./assets/coffeecup.png" width="25px">
+          <img src="./assets/coffeecup.png" width="25px" id="coffeeCup">
         </a>
     
         <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -40,22 +40,44 @@
     
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item">
-            Home
-          </a>
-    
-          <a class="navbar-item" href="about.html">
-            About
-          </a>
     
         </div>
     
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
-              <a class="button is-primary" id="settings-button">
-                <strong>Settings</strong>
-              </a>
+              <div class="dropdown is-right" id="settings-button">
+                <div class="dropdown-trigger">
+                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu2" id="settingsButton">
+                    <span>Settings</span>
+                    <span class="icon is-small">
+                      <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu2" role="menu">
+                  <div class="dropdown-content">
+                    <div class="dropdown-item">
+                      <p>Placeholder text.</p>
+                    </div>
+                    <hr class="dropdown-divider">
+                    <div class="dropdown-item">
+                      <input type="checkbox" id="lightMode">
+                      <label for="lightMode">Enable light mode</label>
+                    </div>
+                    <hr class="dropdown-divider">
+                    <div class="dropdown-item">
+                      <p id="radiusRange">Radius: <input type="range" min="100" max="10000" value="10000" class="slider" id="myRange">
+                        <span id='radiusRangeValue'></span>
+                      </p>
+                    </div>
+                    <hr class="dropdown-divider">
+                    <a href="#" class="dropdown-item">
+                      More placeholder text but a link this time.
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -132,5 +154,6 @@
     <script src="js/func_query.js"></script>
     <script src="js/func_listeners.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/settings_button.js"></script>
 </body>
 </html>
