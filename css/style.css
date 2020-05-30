@@ -50,8 +50,10 @@ h1 {
 #weatherBlock {
     width: 250px;
     height: 130px;
-    margin-top: 20px;
-    margin-left: 1130px;
+    margin: auto;
+    left: 36vw;
+    top: 1vw;
+    position: relative;
 }
 
 #dayPara {
@@ -65,12 +67,10 @@ h1 {
     font-size: 25px;
     margin-left: 70px;
     color:rgb(219, 219, 219);
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
 }
 
-.fa-cloud-sun {
-    font-size: 30px;
-    color: rgb(219, 219, 219);
-}
 
 #inputAdd {
     width: 40%;
@@ -107,4 +107,12 @@ h2 {
 
 .coffee {
     /* width: 100px;*/
+
 }
+
+#aboutPage {
+    text-align: center;
+    margin-top: 10vh;
+}
+
+
