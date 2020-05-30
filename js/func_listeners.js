@@ -151,11 +151,11 @@ function cb_places(res)
     $('#li_0').click();
 }
 
+$('#li_0').click();
 
 
 
-
-$("#settings-button").on("click", function() {      // code for opening and closing 
+$("#settings-button").on("click", function() {       // code for opening and closing 
     $("#settings-button").toggleClass("is-active");  // settings button
 });
 
@@ -197,6 +197,7 @@ $("#lightMode").on("click", lightModeFunc)
            $(".coffee").css("color", "");
            $(".coffee").css("border-color", "");
        } 
- }
-    $('#li_0').click();
+ };
+
+ 
 
