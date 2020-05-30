@@ -1,3 +1,3 @@
 $("#settings-button").on("click", function() {
-    console.log("test");
+    var newDiv = $("<div id='test54'>")
 });
