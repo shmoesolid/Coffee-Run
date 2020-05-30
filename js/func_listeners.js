@@ -6,7 +6,8 @@
 function cb_start(event) 
 {
     $("#homeScreen").addClass('hide');
-    //toggleDisplay( $("#loadingScreen") );
+    $("#loadingScreen").removeClass('hide');
+    //toggleDisplay( $('#loadingScreen') );
     getLocation();
 }
 
@@ -27,8 +28,8 @@ function cb_locationSelect(event)
     // update iframe's src location with new
     $('#gmap_canvas').attr("src", newSource);
 
-    // force reload
-    //$('#currentElement').attr("src", $('#currentElement').attr("src"));
+    // update descriptions display
+    toggleListDescription(event.target.dataset.des);
 }
 
 /** callback for weather ajax call
@@ -63,8 +64,10 @@ function cb_places(res)
     console.log(res);
   
     // show list screen container
+    $("#loadingScreen").addClass('hide');
     $("#listScreen").removeClass('hide');
-    //toggleDisplay( $("#listScreen") );
+    //toggleDisplay( $('#listScreen') );
+    
 
     // strip out unwanted places from results
     var strippedData = _stripUnwantedPlaces(res.results, UNWANTED_PLACES);
@@ -90,15 +93,51 @@ function cb_places(res)
 
         // build li and button and append to locElm
         //<li><button class="coffee button is-black is-inverted is-outlined">COFFEE</button></li>
+        /*
+        <div id="d_0" style="margin-bottom:10px;">
+            <p class="has-text-light" style="padding:2px 10px 2px 10px">test</p>
+            <p class="has-text-light" style="padding:2px 10px 2px 10px">test</p>
+        </div>
+        */
         var liElm = $('<li>');
+
         var buttonElm = $('<button>');
-        buttonElm.addClass("coffee button is-black is-inverted is-outlined");
-        buttonElm.attr("id", "lb_" + i);
+        buttonElm.addClass("coffee button is-black is-inverted is-outlined is-fullwidth");
+        buttonElm.attr("id", "li_" + i);
         buttonElm.attr("value", current.name);//current.name+","+current.address);
         buttonElm.attr("data-lat", current.location.lat);
         buttonElm.attr("data-lon", current.location.lng);
-        buttonElm.text(current.name);
+        buttonElm.attr("data-des", "d_" + i);
+        buttonElm.text(current.name + " (" + current.distance + "m)");
         liElm.append(buttonElm);
+
+        var desElm = $('<div>');
+        desElm.attr("id", "d_" + i);
+        desElm.attr("style", 'margin-bottom:10px;');
+
+        if (current.address != 'undefined')
+            desElm.append("<p class='has-text-light' style='padding:2px 10px;'>" + 
+                current.address + 
+                "</p>"
+            );
+
+        if (current.phone_number != 'undefined')
+            desElm.append("<p class='has-text-light' style='padding:2px 10px;'>" + 
+                current.phone_number + 
+                "</p>"
+            );
+
+        if (current.website != 'undefined')
+            desElm.append("<p class='has-text-light' style='padding:2px 10px;'>" + 
+                "<a href='" + current.website + "'>Website</a>" +
+                "</p>"
+            );
+
+        // hide and append
+        desElm.hide();
+        liElm.append(desElm);
+
+        // append whole thing
         locElm.append(liElm);
 
         // create listener for button
@@ -106,5 +145,5 @@ function cb_places(res)
     }
 
     // click the first location to set source
-    $('#lb_0').click();
+    $('#li_0').click();
 }

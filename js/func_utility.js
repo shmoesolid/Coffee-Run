@@ -28,10 +28,10 @@ function convertKtoC(kTemp) { return kTemp - 273.15; }
  * 
  * @param {element} elmToShow 
  */
-function toggleDisplay(elmToShow)
+/*function toggleDisplay(elmToShow)
 {
     // setup quick array of all
-    var elms = [ $("#homeScreen"), $("#listScreen"),  $('#aboutScreen') ];
+    var elms = [ $("#homeScreen"), $("#listScreen"), $('#loadingScreen') ]; // $('#aboutScreen'), 
 
     // go through each one and determin visibility
     for (var i = 0; i < elms.length; i++)
@@ -51,5 +51,21 @@ function toggleDisplay(elmToShow)
             if (!elms[i].hasClass('hide'))
                 elms[i].addClass('hide');
         }
+    }
+}*/
+
+function toggleListDescription(target)
+{
+    var locListDes = $('#locations-list').find('div');
+
+    for (var i = 0; i < locListDes.length; i++)
+    {
+        // show
+        if (locListDes[i].id == target) 
+            locListDes[i].style.display = "block";
+
+        // hide
+        else locListDes[i].style.display = "none";
+            
     }
 }
