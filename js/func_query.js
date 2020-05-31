@@ -29,7 +29,8 @@ function query_weather(lat, lon)
  */
 function query_places(lat, lon)
 {
-    var radius = $('#myRange').val(); // default
+    // get value from slider (default is 10000)
+    var radius = $('#myRange').val();
 
     // setup our data to send
     var settings = 

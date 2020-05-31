@@ -32,9 +32,9 @@ h1 {
 }
 
 #btnBox {
-    background-color: transparent;
-    box-shadow: none;
-}
+        background-color: transparent;
+        box-shadow: none;
+    }
 
 #gsBtn {
     animation: fadeInDown; 
@@ -64,7 +64,7 @@ h1 {
     filter: grayscale(100%);
 }
 
-/* handles other hide/show divs clear floating from weather */
+/* handles other hide/show divs floating from weather */
 .container 
 {
     clear: right;
@@ -127,12 +127,6 @@ iframe
 {
     height:100%;
     width:100%;
-    border: 10px solid;
-    border-color: black; /* just in case default */
-}
-
-/* list description */
-.des-theme-change 
-{
-    font-size: 12px;
+    border: 5px solid;
+    border-color: #999;
 }

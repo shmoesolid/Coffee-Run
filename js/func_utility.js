@@ -24,48 +24,46 @@ function convertKtoF(kTemp) { return Math.round( convertCtoF(convertKtoC(kTemp))
 function convertCtoF(cTemp) { return cTemp * 9/5 + 32; }
 function convertKtoC(kTemp) { return kTemp - 273.15; }
 
-/**
+/////////////////////////////////////////////////////////////////////////
+/** toggles description display of list of locations based on selection
  * 
- * @param {element} elmToShow 
+ * @param {element} target 
  */
-/*function toggleDisplay(elmToShow)
-{
-    // setup quick array of all
-    var elms = [ $("#homeScreen"), $("#listScreen"), $('#loadingScreen') ]; // $('#aboutScreen'), 
-
-    // go through each one and determin visibility
-    for (var i = 0; i < elms.length; i++)
-    {
-        // show it
-        if (elms[i] == elmToShow)
-        {
-            // has it? remove it
-            if (elms[i].hasClass('hide'))
-                elms[i].removeClass('hide');
-        }
-
-        // hide the rest
-        else
-        {
-            // doesn't have it?  add it
-            if (!elms[i].hasClass('hide'))
-                elms[i].addClass('hide');
-        }
-    }
-}*/
-
 function toggleListDescription(target)
 {
+    // get all div description containers
     var locListDes = $('#locations-list').find('div');
 
+    // go through them all and handle accordingly
     for (var i = 0; i < locListDes.length; i++)
     {
         // show
-        if (locListDes[i].id == target) 
-            locListDes[i].style.display = "block";
+        if (locListDes[i].id == target) locListDes[i].style.display = "block";
 
         // hide
         else locListDes[i].style.display = "none";
-            
     }
+}
+
+/////////////////////////////////////////////////////////////////////////
+/** converts meters to miles and rounds to 2 dec places
+ * 
+ * @param {int} meters 
+ */
+function convertMetersToMiles(meters)
+{
+    return (meters * 0.00062137).toFixed(2);
+}
+
+/////////////////////////////////////////////////////////////////////////
+/** returns formatted truplaces phone number
+ * 
+ * @param {string} number 
+ */
+function formatPhone(number)
+{
+    var area = number.substring(2, 5);
+    var first = number.substring(5, 8);
+    var last = number.substring(8, 12);
+    return "("+ area +") "+ first +"-"+ last;
 }
