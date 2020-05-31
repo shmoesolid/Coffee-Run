@@ -23,60 +23,62 @@
 
 <body>
 
-
-    <!-- Navbar -->
-    <nav class="navbar" role="navigation" aria-label="main navigation" id="navbar1">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="">
-          <img src="./assets/coffeecup.png" width="25px" id="coffeeCup">
-        </a>
+  <!-- Navbar -->
+  <nav class="navbar" role="navigation" aria-label="main navigation" id="navbar1">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img src="./assets/coffeecup.png" width="25px" id="coffeeCup">
+      </a>
     
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
   
+    </div>
+    <div id="navbarBasicExample" class="navbar-menu" >
+      <div class="navbar-start">
+    
       </div>
-      <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
     
-        </div>
-    
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <div class="buttons">
-              <div class="dropdown is-right" id="settings-button">
-                <div class="dropdown-trigger">
-                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu2" id="settingsButton">
-                    <span>Settings</span>
-                    <span class="icon is-small">
-                      <i class="fas fa-angle-down" aria-hidden="true"></i>
-                    </span>
-                  </button>
-                </div>
-                <div class="dropdown-menu" id="dropdown-menu2" role="menu">
-                  <div class="dropdown-content">
-                    <div class="dropdown-item">
-                      <p>Placeholder text.</p>
-                    </div>
-                    <hr class="dropdown-divider">
-                    <div class="dropdown-item">
-                      <input type="checkbox" id="lightMode">
-                      <label for="lightMode">Enable light mode</label>
-                    </div>
-                    <hr class="dropdown-divider">
-                    <div class="dropdown-item">
-                      <p id="radiusRange">Radius: <input type="range" min="100" max="10000" value="10000" class="slider" id="myRange">
-                        <span id='radiusRangeValue'></span>
-                      </p>
-                    </div>
-                    <hr class="dropdown-divider">
-                    <a href="#" class="dropdown-item">
-                      More placeholder text but a link this time.
-                    </a>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <div class="dropdown is-right" id="settings-button" style="padding-right:10px;">
+              <div class="dropdown-trigger">
+                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu" id="settingsButton">
+                  <span>Settings</span>
+                  <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </div>
+              <div class="dropdown-menu" id="dropdown-menu2" role="menu">
+                <div class="dropdown-content">
+                  <!-- removed temp until something done
+                  <div class="dropdown-item">
+                    <p>Placeholder text.</p>
                   </div>
-                </div>
+                  <hr class="dropdown-divider">
+                  -->
+                  <div class="dropdown-item">
+                    <input type="checkbox" id="lightMode">
+                    <label for="lightMode">Enable light mode</label>
+                  </div>
+                  <hr class="dropdown-divider">
+                  <div class="dropdown-item">
+                    <p id="radiusRange">Radius: <input type="range" min="100" max="10000" value="10000" class="slider" id="myRange">
+                      <span id='radiusRangeValue'></span>
+                    </p>
+                  </div>
+                  <!-- removed temp until something done
+                  <hr class="dropdown-divider">
+                  <a href="#" class="dropdown-item">
+                    More placeholder text but a link this time.
+                  </a> 
+                  -->
+                </div> 
               </div>
             </div>
           </div>
@@ -86,81 +88,66 @@
   </nav>
   <!-- End of navbar -->
 
-  <div class="block" id="weatherBlock">
+  <!-- WEATHER -->
+  <div id="weatherBlock" >
     <p id="degrees"><i class="fas fa-cloud-sun"></i> 90º</p>
     <p id="dayPara">Thursday, May 21</p>
   </div>
 
-  <div class="container" id="homeScreen">
-    <!-- div class="block" id="weatherBlock">
-      <p id="degrees"><i class="fas fa-cloud-sun"></i> 90º</p>
-      <p id="dayPara">Thursday, May 21</p>
-    </div -->
-    <h1>coffee run<i class="fas fa-walking"></i></h1>
-    <div class="box has-text-centered" id="btnBox">
-      <button class="button is-dark" class="animate__animated animate__fadeInDown" id="gsBtn">Get Started</button>
-    </div>
-    <div id="aboutScreen">
-      <p id="aboutPage">Hey there! If you're anything like the creators of this site, you love coffee! <br>
-        Finding a cozy spot to enjoy a cup of joe is real gem, but sometime's hard to find. <br>
-        Anytime, and anywhere, Coffee Run is here to locate coffee shops near you!
-      </p>
-    </div>
-  </div>
-
-  <div class="container hide" id="loadingScreen">
-    <h1>loading...</h1>
-  </div>
-
-  <div class="container hide" id="listScreen">
-    <h2>Coffee Near You</h2>
-    <div class="columns">
-      <ul id="locations-list" class="column">
-        <li><button class="coffee button is-black is-inverted is-outlined">COFFEE</button></li>
-        <li><button class="coffee button is-black is-inverted is-outlined">COFFEE</button></li>
-        <li><button class="coffee button is-black is-inverted is-outlined">COFFEE</button></li>
-      </ul>
-
-      <!-- START EMBEDDED MAP-->
-      <div class="gmap_canvas column is-three-quarters">
-        <iframe 
-          width="600" 
-          height="500" 
-          id="gmap_canvas" 
-          src="" 
-          frameborder="0" 
-          scrolling="no" 
-          marginheight="0" 
-          marginwidth="0"
-        ></iframe>
+  <main style="padding:0 30px 0 20px;">
+    <!-- HOME SCREEN SHOW/HIDE CONTAINER -->
+    <div class="con" id="homeScreen" >
+      <h1>coffee run<i class="fas fa-walking"></i></h1>
+      <div class="box has-text-centered" id="btnBox">
+        <button class="button is-dark" class="animate__animated animate__fadeInDown" id="gsBtn">Get Started</button>
       </div>
-      <style>
-        .gmap_canvas 
-        {
-          overflow:hidden;
-          background:none!important;
-          height:80vh;
-          width:100%;
-          min-height:200px;
-          min-width:300px;
-        }
-        iframe
-        {
-          height:100%;
-          width:100%;
-        }
-      </style>
-      <!-- END EMBEDDED MAP -->
+      <div id="aboutScreen">
+        <p id="aboutPage">Hey there! If you're anything like the creators of this site, you love coffee!  
+          Finding a cozy spot to enjoy a cup of joe is real gem, but sometime's hard to find.  
+          Anytime, and anywhere, Coffee Run is here to locate coffee shops near you!
+        </p>
+      </div>
     </div>
-  </div>
+
+    <!-- LOADING SCREEN SHOW/HIDE CONTAINER -->
+    <div class="con hide" id="loadingScreen">
+      <h1>loading...</h1>
+    </div>
+
+    <!-- LOCATION LIST SCREEN SHOW/HIDE CONTAINER -->
+    <div class="con hide" id="listScreen">
+      <h2>Coffee Near You</h2>
+      <div class="columns">
+        <ul id="locations-list" class="column">
+          <!-- JAVASCRIPT GENERATED LI -->
+        </ul>
+
+        <!-- START EMBEDDED MAP-->
+        <div class="gmap_canvas column is-three-quarters">
+          <iframe 
+            id="gmap_canvas" 
+            src="" 
+            frameborder="0" 
+            scrolling="no" 
+            marginheight="0" 
+            marginwidth="0"
+          ></iframe>
+        </div>
+        <!-- END EMBEDDED MAP -->
+      </div>
+    </div>
+  </main>
+
+  <footer style="margin-bottom:40px;"></footer>
 
   <!-- SCRIPTS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="js/prelem.js"></script>
-    <script src="js/func_utility.js"></script>
-    <script src="js/func_location.js"></script>
-    <script src="js/func_query.js"></script>
-    <script src="js/func_listeners.js"></script>
-    <script src="js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="js/prelem.js"></script>
+  <script src="js/func_utility.js"></script>
+  <script src="js/func_location.js"></script>
+  <script src="js/func_query.js"></script>
+  <script src="js/func_listeners.js"></script>
+  <script src="js/main.js"></script>
+
 </body>
 </html>
