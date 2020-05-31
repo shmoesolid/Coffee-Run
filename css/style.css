@@ -7,8 +7,8 @@ html {
     background: linear-gradient(to bottom,rgb(58, 58, 58), black);
     background-repeat: no-repeat;
     background-size: auto;
-    min-width: 100%;
-    min-height: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
 }
 
 h1 {
@@ -50,7 +50,7 @@ h1 {
 
 /* WEATHER */
 #weatherBlock {
-    padding-right:20px;
+    padding-right:30px;
     float:right;
 }
 #dayPara {
@@ -65,9 +65,10 @@ h1 {
 }
 
 /* handles other hide/show divs clear floating from weather */
-.container 
+.con
 {
     clear: right;
+    margin:auto;
 }
 
 #inputAdd {
@@ -127,7 +128,7 @@ iframe
 {
     height:100%;
     width:100%;
-    border: 10px solid;
+    border: 5px solid;
     border-color: black; /* just in case default */
 }
 

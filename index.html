@@ -45,7 +45,7 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <div class="dropdown is-right" id="settings-button">
+            <div class="dropdown is-right" id="settings-button" style="padding-right:10px;">
               <div class="dropdown-trigger">
                 <button class="button" aria-haspopup="true" aria-controls="dropdown-menu" id="settingsButton">
                   <span>Settings</span>
@@ -94,49 +94,51 @@
     <p id="dayPara">Thursday, May 21</p>
   </div>
 
-  <!-- HOME SCREEN SHOW/HIDE CONTAINER -->
-  <div class="container" id="homeScreen" >
-    <h1>coffee run<i class="fas fa-walking"></i></h1>
-    <div class="box has-text-centered" id="btnBox">
-      <button class="button is-dark" class="animate__animated animate__fadeInDown" id="gsBtn">Get Started</button>
-    </div>
-    <div id="aboutScreen">
-      <p id="aboutPage">Hey there! If you're anything like the creators of this site, you love coffee!  
-        Finding a cozy spot to enjoy a cup of joe is real gem, but sometime's hard to find.  
-        Anytime, and anywhere, Coffee Run is here to locate coffee shops near you!
-      </p>
-    </div>
-  </div>
-
-  <!-- LOADING SCREEN SHOW/HIDE CONTAINER -->
-  <div class="container hide" id="loadingScreen">
-    <h1>loading...</h1>
-  </div>
-
-  <!-- LOCATION LIST SCREEN SHOW/HIDE CONTAINER -->
-  <div class="container hide" id="listScreen">
-    <h2>Coffee Near You</h2>
-    <div class="columns">
-      <ul id="locations-list" class="column">
-        <!-- JAVASCRIPT GENERATED: <li><button class="coffee button is-black is-inverted is-outlined">COFFEE</button></li> -->
-      </ul>
-
-      <!-- START EMBEDDED MAP-->
-      <div class="gmap_canvas column is-three-quarters">
-        <iframe 
-          width="600" 
-          height="500" 
-          id="gmap_canvas" 
-          src="" 
-          frameborder="0" 
-          scrolling="no" 
-          marginheight="0" 
-          marginwidth="0"
-        ></iframe>
+  <main style="padding:0 30px 0 20px;">
+    <!-- HOME SCREEN SHOW/HIDE CONTAINER -->
+    <div class="con" id="homeScreen" >
+      <h1>coffee run<i class="fas fa-walking"></i></h1>
+      <div class="box has-text-centered" id="btnBox">
+        <button class="button is-dark" class="animate__animated animate__fadeInDown" id="gsBtn">Get Started</button>
       </div>
-      <!-- END EMBEDDED MAP -->
+      <div id="aboutScreen">
+        <p id="aboutPage">Hey there! If you're anything like the creators of this site, you love coffee!  
+          Finding a cozy spot to enjoy a cup of joe is real gem, but sometime's hard to find.  
+          Anytime, and anywhere, Coffee Run is here to locate coffee shops near you!
+        </p>
+      </div>
     </div>
-  </div>
+
+    <!-- LOADING SCREEN SHOW/HIDE CONTAINER -->
+    <div class="con hide" id="loadingScreen">
+      <h1>loading...</h1>
+    </div>
+
+    <!-- LOCATION LIST SCREEN SHOW/HIDE CONTAINER -->
+    <div class="con hide" id="listScreen">
+      <h2>Coffee Near You</h2>
+      <div class="columns">
+        <ul id="locations-list" class="column">
+          <!-- JAVASCRIPT GENERATED LI -->
+        </ul>
+
+        <!-- START EMBEDDED MAP-->
+        <div class="gmap_canvas column is-three-quarters">
+          <iframe 
+            id="gmap_canvas" 
+            src="" 
+            frameborder="0" 
+            scrolling="no" 
+            marginheight="0" 
+            marginwidth="0"
+          ></iframe>
+        </div>
+        <!-- END EMBEDDED MAP -->
+      </div>
+    </div>
+  </main>
+
+  <footer style="margin-bottom:40px;"></footer>
 
   <!-- SCRIPTS -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
