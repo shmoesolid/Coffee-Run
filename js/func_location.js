@@ -103,7 +103,7 @@ function getLocationByOther(location)
         query_places(res.latt, res.longt);
         query_weather(res.latt, res.longt);
 
-    }).fail(function(res)
+    }).fail(function()
     {
         $("#loadingScreen").addClass('hide');
         $("#homeScreen").removeClass('hide');

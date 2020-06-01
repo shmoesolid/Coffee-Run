@@ -18,6 +18,12 @@ $("#lightMode").on("click", lightModeFunc);
 $("#search_submit").on("click", function() { searchSubmit($('#search_input').val()) });
 $('#search_input').on("keyup", function(e) { if (e.which === 13) searchSubmit($('#search_input').val()) });
 
+//setup saving storage for on change of slider
+$('#myRange').on("change", changeRange);
+
+// run our theme function
+lightModeFunc();
+
 // get weather only from IP on load
 getLocationByIP(true);
 
