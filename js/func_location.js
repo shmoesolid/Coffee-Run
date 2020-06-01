@@ -76,3 +76,36 @@ function getLocationByIP(weatherOnly=false)
 
     });
 }
+
+/** gets lat/lon by other means ie city, zip, etc
+ * 
+ * @param {string} location 
+ */
+function getLocationByOther(location)
+{
+    // return if empty
+    if (!location) return;
+
+    // build url
+    var queryURL = "https://geocode.xyz/"+ location +"?json=1";
+
+    // our ajax call
+    $.ajax(
+    {
+        url: queryURL,
+        method: "GET"
+    }).then(function(res)
+    {
+        // DEBUG
+        console.log(res);
+
+        // query places and weather with lat/lon
+        query_places(res.latt, res.longt);
+        query_weather(res.latt, res.longt);
+
+    }).fail(function(res)
+    {
+        $("#loadingScreen").addClass('hide');
+        $("#homeScreen").removeClass('hide');
+    });
+}

@@ -30,17 +30,19 @@
         <img src="./assets/coffeecup.png" width="25px" id="coffeeCup">
       </a>
     
+      <!-- hiding for now because it doesn't do anything anyways
       <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
       </a>
+      -->
   
     </div>
     <div id="navbarBasicExample" class="navbar-menu" >
-      <div class="navbar-start">
+      <!-- div class="navbar-start">
     
-      </div>
+      </div -->
     
       <div class="navbar-end">
         <div class="navbar-item">
@@ -118,9 +120,24 @@
     <div class="con hide" id="listScreen">
       <h2>Coffee Near You</h2>
       <div class="columns">
-        <ul id="locations-list" class="column">
-          <!-- JAVASCRIPT GENERATED LI -->
-        </ul>
+        
+        <div class="column">
+
+          <!-- INPUT -->
+          <div class="field has-addons">
+            <div class="control">
+              <input class="input" type="text" id="search_input" placeholder="Search a location..." />
+            </div>
+            <div class="control">
+              <button class="button is-black is-inverted is-outlined" id="search_submit">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+          </div>
+          <ul id="locations-list">
+            <!-- JAVASCRIPT GENERATED LI -->
+          </ul>
+        </div>
 
         <!-- START EMBEDDED MAP-->
         <div class="gmap_canvas column is-three-quarters">

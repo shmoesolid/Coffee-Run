@@ -10,6 +10,24 @@ function cb_start(event)
     getLocation();
 }
 
+/** manual city search
+ * 
+ * @param {string} searchString
+ */
+function searchSubmit(searchString)
+{
+    // return if blank and blank if good
+    if (!searchString) return;
+    $('#search_input').val("");
+
+    // make call for city, zip, etc to get lat/lon
+    getLocationByOther(searchString);
+
+    // handle loading screen
+    $("#listScreen").addClass('hide');
+    $("#loadingScreen").removeClass('hide');
+}
+
 /** callback for specific location select/click
  * 
  * @param {event} event 
@@ -164,6 +182,11 @@ function lightModeFunc()
         $(".coffee").css("color", "#5a4a3f");
         $(".coffee").css("border-color", "#5a4a3f");
 
+        // search
+        $("#search_input").css("border-color", "#5a4a3f");
+        $("#search_submit").css("border-color", "#5a4a3f");
+        $("#search_submit").css("color", "#5a4a3f");
+
         // maps frame border color
         $("iframe").css("border-color", "#5a4a3f");
 
@@ -186,6 +209,11 @@ function lightModeFunc()
         $("h2").css("color", "white");
         $(".coffee").css("color", "");
         $(".coffee").css("border-color", "");
+
+        // search
+        $("#search_input").css("border-color", "");
+        $("#search_submit").css("border-color", "");
+        $("#search_submit").css("color", "");
 
         // maps frame border color
         $("iframe").css("border-color", "#666");

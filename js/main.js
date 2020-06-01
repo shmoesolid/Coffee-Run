@@ -14,6 +14,10 @@ $('.dropdown-item').bind('click', function (e) { e.stopPropagation() });
 // checkbox for lightmode
 $("#lightMode").on("click", lightModeFunc);
 
+// search for city click button or hit enter
+$("#search_submit").on("click", function() { searchSubmit($('#search_input').val()) });
+$('#search_input').on("keyup", function(e) { if (e.which === 13) searchSubmit($('#search_input').val()) });
+
 // get weather only from IP on load
 getLocationByIP(true);
 

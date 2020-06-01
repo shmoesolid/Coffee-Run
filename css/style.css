@@ -50,6 +50,7 @@ h1 {
 
 /* WEATHER */
 #weatherBlock {
+    padding-top:10px;
     padding-right:30px;
     float:right;
 }
