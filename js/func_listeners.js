@@ -160,12 +160,32 @@ function cb_places(res)
     $('#li_0').click();
 }
 
+/** handles displaying setting value and saving of
+ * 
+ */
+function changeRange()
+{
+    // get value
+    var val = $('#myRange').val();
+
+    // set display text
+    $('#radiusRangeValue').text( convertMetersToMiles(val) + "mi" );
+
+    // handle saving of var
+    storage.radius = val;
+    saveStorageVars(SAVE_NAME, storage);
+}
+
 /** handles theme change light/dark
  * 
  */
 function lightModeFunc() 
-{     
-    if ($("#lightMode").is(":checked")) 
+{
+    // readability
+    var active = $("#lightMode").is(":checked");
+
+    // light mode enabled
+    if (active) 
     {                              
         console.log("Light mode has been enabled");
         $("#navbar1").css("background-color", "#F8F4F1");
@@ -193,6 +213,8 @@ function lightModeFunc()
         // des remove light text class
         $('.des-theme-change').removeClass("has-text-light");
     } 
+
+    // light mode disabled
     else 
     { 
         console.log("Light mode has been disabled");
@@ -221,6 +243,10 @@ function lightModeFunc()
         // des add light text class if doesn't have it
         $('.des-theme-change:not(.has-text-light)').addClass("has-text-light");
     } 
+
+    // handle saving of var
+    storage.lightMode = active;
+    saveStorageVars(SAVE_NAME, storage);
 };
 
  
