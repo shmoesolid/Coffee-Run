@@ -40,7 +40,7 @@ function cb_locationSelect(event)
         "&t=&z=" + "15" +
         "&ie=UTF8&iwloc=&output=embed";
 
-    console.log(newSource);
+    //console.log(newSource);
 
     // update iframe's src location with new
     $('#gmap_canvas').attr("src", newSource);
@@ -56,7 +56,7 @@ function cb_locationSelect(event)
 function cb_weather(res)
 {
     // DEBUG
-    console.log(res);
+    //console.log(res);
 
     // creates image with appropriate icon and sets temp data in F
     var iconUrl = "http://openweathermap.org/img/w/" + res.current.weather[0].icon + ".png";
@@ -78,7 +78,7 @@ function cb_weather(res)
 function cb_places(res)
 {
     // DEBUG
-    console.log(res);
+    //console.log(res);
   
     // show list screen container
     $("#loadingScreen").addClass('hide');
@@ -105,12 +105,13 @@ function cb_places(res)
         // button creation
         var buttonElm = $('<button>');
         buttonElm.addClass("coffee button is-black is-inverted is-outlined is-fullwidth");
+        //buttonElm.attr("style", "word-wrap: break-word;overflow-wrap: break-word;");
         buttonElm.attr("id", "li_" + i);
         buttonElm.attr("value", current.name);
         buttonElm.attr("data-lat", current.location.lat);
         buttonElm.attr("data-lon", current.location.lng);
         buttonElm.attr("data-des", "d_" + i);
-        buttonElm.text(current.name + " (" + convertMetersToMiles(current.distance) + "mi)");
+        buttonElm.html("<p>" + current.name + " (" + convertMetersToMiles(current.distance) + "mi)</p>");
         liElm.append(buttonElm);
 
         // div description container
@@ -187,7 +188,7 @@ function lightModeFunc()
     // light mode enabled
     if (active) 
     {                              
-        console.log("Light mode has been enabled");
+        //console.log("Light mode has been enabled");
         $("#navbar1").css("background-color", "#F8F4F1");
         $('#coffeeCup').attr("src", "./assets/coffeecup_lightmode.png");
         $("html").css("background", "linear-gradient(to bottom, #EBDDD6, #f9f3f7)");
@@ -217,7 +218,7 @@ function lightModeFunc()
     // light mode disabled
     else 
     { 
-        console.log("Light mode has been disabled");
+        //console.log("Light mode has been disabled");
         $("#navbar1").css("background-color", "rgb(26, 26, 26)")
         $('#coffeeCup').attr("src", "./assets/coffeecup.png");
         $("html").css("background", "linear-gradient(to bottom,rgb(58, 58, 58), black)");
