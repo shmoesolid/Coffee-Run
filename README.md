@@ -26,5 +26,6 @@ As a coffee drinker, I want to find nearby coffee shops, so that I am able to ge
 - JQuery
 - OpenWeather API
 - TrueWay Places
+- ipapi
 - geocode.xyz
 - Bulma Framework
