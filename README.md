@@ -1,24 +1,30 @@
 # Coffee Run
 
-##Description
+## Description
 As a coffee drinker, I want to find nearby coffee shops, so that I am able to get my caffiene fix. 
 
-##Developers:
+## Developers:
 - Shane Koehler
 - Robert Jarrell
 - Jaylan Wienckowski
 
-##Installation
+## Installation
 
 
-##Usage 
+## Usage 
+### Step One
+  - Press the Get Started Button
+### Step Two
+  - Allow the site to get your location
+### Step Three 
+  - Click on one of the Cafe's and view the google map provided
 
-
-##Technologies Used
+## Technologies Used
 - HTML
 - CSS
 - JavaScript
 - JQuery
 - OpenWeather API
 - TrueWay Places
+- geocode.xyz
 - Bulma Framework
