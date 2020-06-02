@@ -20,7 +20,7 @@ var storage =
 // attempt to get storage
 storage = loadStorageVars(SAVE_NAME, storage);
 
-console.log("LIGHT_MODE" + storage.lightMode);
+//console.log("LIGHT_MODE" + storage.lightMode);
 
 // set settings values based on storage
 $('#lightMode').prop('checked', storage.lightMode);

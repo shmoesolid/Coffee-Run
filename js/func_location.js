@@ -97,7 +97,7 @@ function getLocationByOther(location)
     }).then(function(res)
     {
         // DEBUG
-        console.log(res);
+        //console.log(res);
 
         // query places and weather with lat/lon
         query_places(res.latt, res.longt);
