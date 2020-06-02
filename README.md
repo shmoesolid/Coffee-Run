@@ -1,20 +1,20 @@
 # Coffee Run
 
-##Description
+## Description
 As a coffee drinker, I want to find nearby coffee shops, so that I am able to get my caffiene fix. 
 
-##Developers:
+## Developers:
 - Shane Koehler
 - Robert Jarrell
 - Jaylan Wienckowski
 
-##Installation
+## Installation
 
 
-##Usage 
+## Usage 
 
 
-##Technologies Used
+## Technologies Used
 - HTML
 - CSS
 - JavaScript
