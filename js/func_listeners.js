@@ -40,7 +40,8 @@ function cb_locationSelect(event)
         "&t=&z=" + "15" +
         "&ie=UTF8&iwloc=&output=embed";
 
-    //console.log(newSource);
+    // DEBUG
+    console.log(newSource);
 
     // update iframe's src location with new
     $('#gmap_canvas').attr("src", newSource);
@@ -111,7 +112,7 @@ function cb_places(res)
         buttonElm.attr("data-lat", current.location.lat);
         buttonElm.attr("data-lon", current.location.lng);
         buttonElm.attr("data-des", "d_" + i);
-        buttonElm.html("<p>" + current.name + " (" + convertMetersToMiles(current.distance) + "mi)</p>");
+        buttonElm.text(current.name + " (" + convertMetersToMiles(current.distance) + "mi)");
         liElm.append(buttonElm);
 
         // div description container
